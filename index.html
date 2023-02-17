@@ -1,0 +1,606 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Resturant</title>
+    <script src="/src/app.js" defer></script>
+  </head>
+  <body>
+    <section>
+      <div class="flex bg-darkBlue1">
+        <div
+          class="flex w-[7%] bg-darkBlue fixed h-full flex-col space-y-6"
+        >
+          <!-- sidebar-->
+          <a href="#" class="navbarItems bg-darkpink mt-6"
+            ><svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="48"
+              height="48"
+              viewBox="0 0 24 24"
+              fill="hsl(11deg 75% 66%)"
+            >
+              <path
+                d="M19 2H5C3.346 2 2 3.346 2 5v2.831c0 1.053.382 2.01 1 2.746V20a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1v-5h4v5a1 1 0 0 0 1 1h2a1 1 0 0 0 1-1v-9.424c.618-.735 1-1.692 1-2.746V5c0-1.654-1.346-3-3-3zm1 3v2.831c0 1.14-.849 2.112-1.891 2.167L18 10c-1.103 0-2-.897-2-2V4h3c.552 0 1 .449 1 1zM10 8V4h4v4c0 1.103-.897 2-2 2s-2-.897-2-2zM4 5c0-.551.448-1 1-1h3v4c0 1.103-.897 2-2 2l-.109-.003C4.849 9.943 4 8.971 4 7.831V5zm6 11H6v-3h4v3z"
+              ></path></svg
+          ></a>
+          <a href="#" class="bg-darkBlue1 p-3 rounded-l-2xl ml-auto">
+            <div class="p-5 rounded-2xl bg-lightIvory mr-2.5">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="#ffffff"
+              >
+                <path
+                  d="M12.71 2.29a1 1 0 0 0-1.42 0l-9 9a1 1 0 0 0 0 1.42A1 1 0 0 0 3 13h1v7a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-7h1a1 1 0 0 0 1-1 1 1 0 0 0-.29-.71zM6 20v-9.59l6-6 6 6V20z"
+                ></path>
+              </svg>
+            </div>
+          </a>
+          <div class="mx-auto flex flex-col space-y-12" id="collapseBtn">
+            <a href="#" class="navbarItems"
+              ><svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="hsl(11deg 75% 66%)"
+              >
+                <path
+                  d="M12 2C6.486 2 2 6.486 2 12s4.486 10 10 10 10-4.486 10-10S17.514 2 12 2zm0 18c-4.411 0-8-3.589-8-8s3.589-8 8-8 8 3.589 8 8-3.589 8-8 8z"
+                ></path>
+                <path d="m8 16 5.991-2L16 8l-6 2z"></path></svg
+            ></a>
+            <a href="#" class="navbarItems"
+              ><svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="hsl(11deg 75% 66%)"
+              >
+                <path
+                  d="M13 2.051V11h8.949c-.47-4.717-4.232-8.479-8.949-8.949zm4.969 17.953c2.189-1.637 3.694-4.14 3.98-7.004h-8.183l4.203 7.004z"
+                ></path>
+                <path
+                  d="M11 12V2.051C5.954 2.555 2 6.824 2 12c0 5.514 4.486 10 10 10a9.93 9.93 0 0 0 4.255-.964s-5.253-8.915-5.254-9.031A.02.02 0 0 0 11 12z"
+                ></path></svg
+            ></a>
+            <a href="#" class="navbarItems"
+              ><svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="hsl(11deg 75% 66%)"
+              >
+                <path
+                  d="M20 4H4c-1.103 0-2 .897-2 2v12c0 1.103.897 2 2 2h16c1.103 0 2-.897 2-2V6c0-1.103-.897-2-2-2zm0 2v.511l-8 6.223-8-6.222V6h16zM4 18V9.044l7.386 5.745a.994.994 0 0 0 1.228 0L20 9.044 20.002 18H4z"
+                ></path></svg
+            ></a>
+            <a href="#" class="navbarItems"
+              ><svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="hsl(11deg 75% 66%)"
+              >
+                <path
+                  d="m5.705 3.71-1.41-1.42C1 5.563 1 7.935 1 11h1l1-.063C3 8.009 3 6.396 5.705 3.71zm13.999-1.42-1.408 1.42C21 6.396 21 8.009 21 11l2-.063c0-3.002 0-5.374-3.296-8.647zM12 22a2.98 2.98 0 0 0 2.818-2H9.182A2.98 2.98 0 0 0 12 22zm7-7.414V10c0-3.217-2.185-5.927-5.145-6.742C13.562 2.52 12.846 2 12 2s-1.562.52-1.855 1.258C7.184 4.073 5 6.783 5 10v4.586l-1.707 1.707A.996.996 0 0 0 3 17v1a1 1 0 0 0 1 1h16a1 1 0 0 0 1-1v-1a.996.996 0 0 0-.293-.707L19 14.586z"
+                ></path></svg
+            ></a>
+            <a href="#" class="navbarItems"
+              ><svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="hsl(11deg 75% 66%)"
+              >
+                <path
+                  d="M12 16c2.206 0 4-1.794 4-4s-1.794-4-4-4-4 1.794-4 4 1.794 4 4 4zm0-6c1.084 0 2 .916 2 2s-.916 2-2 2-2-.916-2-2 .916-2 2-2z"
+                ></path>
+                <path
+                  d="m2.845 16.136 1 1.73c.531.917 1.809 1.261 2.73.73l.529-.306A8.1 8.1 0 0 0 9 19.402V20c0 1.103.897 2 2 2h2c1.103 0 2-.897 2-2v-.598a8.132 8.132 0 0 0 1.896-1.111l.529.306c.923.53 2.198.188 2.731-.731l.999-1.729a2.001 2.001 0 0 0-.731-2.732l-.505-.292a7.718 7.718 0 0 0 0-2.224l.505-.292a2.002 2.002 0 0 0 .731-2.732l-.999-1.729c-.531-.92-1.808-1.265-2.731-.732l-.529.306A8.1 8.1 0 0 0 15 4.598V4c0-1.103-.897-2-2-2h-2c-1.103 0-2 .897-2 2v.598a8.132 8.132 0 0 0-1.896 1.111l-.529-.306c-.924-.531-2.2-.187-2.731.732l-.999 1.729a2.001 2.001 0 0 0 .731 2.732l.505.292a7.683 7.683 0 0 0 0 2.223l-.505.292a2.003 2.003 0 0 0-.731 2.733zm3.326-2.758A5.703 5.703 0 0 1 6 12c0-.462.058-.926.17-1.378a.999.999 0 0 0-.47-1.108l-1.123-.65.998-1.729 1.145.662a.997.997 0 0 0 1.188-.142 6.071 6.071 0 0 1 2.384-1.399A1 1 0 0 0 11 5.3V4h2v1.3a1 1 0 0 0 .708.956 6.083 6.083 0 0 1 2.384 1.399.999.999 0 0 0 1.188.142l1.144-.661 1 1.729-1.124.649a1 1 0 0 0-.47 1.108c.112.452.17.916.17 1.378 0 .461-.058.925-.171 1.378a1 1 0 0 0 .471 1.108l1.123.649-.998 1.729-1.145-.661a.996.996 0 0 0-1.188.142 6.071 6.071 0 0 1-2.384 1.399A1 1 0 0 0 13 18.7l.002 1.3H11v-1.3a1 1 0 0 0-.708-.956 6.083 6.083 0 0 1-2.384-1.399.992.992 0 0 0-1.188-.141l-1.144.662-1-1.729 1.124-.651a1 1 0 0 0 .471-1.108z"
+                ></path></svg
+            ></a>
+            <a href="#" class="navbarItems">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="hsl(11deg 75% 66%)"
+              >
+                <path
+                  d="M19.002 3h-14c-1.103 0-2 .897-2 2v4h2V5h14v14h-14v-4h-2v4c0 1.103.897 2 2 2h14c1.103 0 2-.897 2-2V5c0-1.103-.898-2-2-2z"
+                ></path>
+                <path d="m11 16 5-4-5-4v3.001H3v2h8z"></path></svg
+            ></a>
+          </div>
+        </div>
+        <div class="bg-darkBlue1 min-h-screen w-[57%] ml-[7%]" id="mainMenuDiv">
+          <nav class="items-center justify-between text-white">
+            <!-- Logo and input-->
+            <div class="p-4 flex mt-2 justify-between mx-4">
+              <div>
+                <h4 class="text-3xl font-bold mb-2">Jaegar Resto</h4>
+                <h4 class="font-thin">Tuesday,2 Feb 2021</h4>
+              </div>
+              <form
+                class="border-[1px] border-gray-500 rounded-md px-2 h-14 flex bg-[#2d303e] items-center"
+              >
+                <svg
+                  aria-hidden="true"
+                  class="w-5 h-5 text-gray-300"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+                  ></path>
+                </svg>
+                <input
+                  type="text"
+                  class="rounded-md bg-[#2d303e] w-12 h-12 text-darkblue1 p-2 text-gray-300 focus:outline-none md:w-52"
+                  placeholder="Search for food,coffee,etc.."
+                />
+              </form>
+            </div>
+            <!-- Menu -->
+            <div
+              class="hidden h-10 font-alata font-semibold md:flex space-x-4 lg:space-x-8 xl:space-x-12 mx-9 pt-4"
+              id="mainMenuNavbar"
+            >
+              <div class="group">
+                <a href="#" class="text-lightIvory">Hot dishes</a>
+                <div class="mr-5 mt-2 border-b-2 border-lightIvory"></div>
+              </div>
+              <div class="group">
+                <a href="#">Cold dishes</a>
+                <div class="menuGroupHover"></div>
+              </div>
+              <div class="group">
+                <a href="#">Soup</a>
+                <div class="menuGroupHover"></div>
+              </div>
+              <div class="group">
+                <a href="#">Grill</a>
+                <div class="menuGroupHover"></div>
+              </div>
+              <div class="group">
+                <a href="#">Appetizer</a>
+                <div class="menuGroupHover"></div>
+              </div>
+              <div class="group">
+                <a href="#">Desert</a>
+                <div class="menuGroupHover"></div>
+              </div>
+            </div>
+            <div
+              class="mt-2 border-b-2 border-[#42465b89] w-[92%] mx-auto"
+            ></div>
+          </nav>
+          <!--title of the menu-->
+          <div class="flex p-8 justify-between">
+            <h4 class="text-2xl text-white font-semibold mb-2">
+              Choose dishes
+            </h4>
+            <div class="px-1 bg-darkBlue rounded-xl border-gray-600 border-2">
+              <select
+                name=""
+                class="bg-darkBlue h-12 text-left rounded-xl px-3 focus:outline-none text-white"
+                style="direction: rtl"
+              >
+                <option value="dinein">Dine In</option>
+              </select>
+            </div>
+          </div>
+          <div
+            class="mx-8 mt-10 grid grid-cols-3 gap-[34px] items-center max-w-6xl"
+            id="menuGrid"
+          >
+            <!--menu grid foods sta-->
+            <a href="" class="menuGridFoods">
+              <img
+                src="/img/product-1.png"
+                id="foodPicture"
+                class="absolute -top-[70px] w-40 h-40 mx-7"
+              />
+              <h4 class="text-center px-8 p-1 mt-20 text-white" id="foodName">
+                Spicy seasoned seafood noodles
+              </h4>
+              <h4
+                class="text-center text-sm p-1 font-semibold text-white"
+                id="foodPrice"
+              >
+                2.29$
+              </h4>
+              <h4 class="text-center text-gray-500" id="foodBowls">
+                20 Bowls available
+              </h4>
+            </a>
+            <a href="" class="menuGridFoods">
+              <img
+                src="/img/product-1.png"
+                id="foodPicture"
+                class="absolute -top-[70px] w-40 h-40 mx-7"
+              />
+              <h4 class="text-center px-8 p-1 mt-20 text-white" id="foodName">
+                Spicy seasoned seafood noodles
+              </h4>
+              <h4
+                class="text-center text-sm p-1 font-semibold text-white"
+                id="foodPrice"
+              >
+                2.29$
+              </h4>
+              <h4 class="text-center text-gray-500" id="foodBowls">
+                20 Bowls available
+              </h4>
+            </a>
+            <a href="" class="menuGridFoods">
+              <img
+                src="/img/product-1.png"
+                id="foodPicture"
+                class="absolute -top-[70px] w-40 h-40 mx-7"
+              />
+              <h4 class="text-center px-8 p-1 mt-20 text-white" id="foodName">
+                Spicy seasoned seafood noodles
+              </h4>
+              <h4
+                class="text-center text-sm p-1 font-semibold text-white"
+                id="foodPrice"
+              >
+                2.29$
+              </h4>
+              <h4 class="text-center text-gray-500" id="foodBowls">
+                20 Bowls available
+              </h4>
+            </a>
+            <a href="" class="menuGridFoods">
+              <img
+                src="/img/product-1.png"
+                id="foodPicture"
+                class="absolute -top-[70px] w-40 h-40 mx-7"
+              />
+              <h4 class="text-center px-8 p-1 mt-20 text-white" id="foodName">
+                Spicy seasoned seafood noodles
+              </h4>
+              <h4
+                class="text-center text-sm p-1 font-semibold text-white"
+                id="foodPrice"
+              >
+                2.29$
+              </h4>
+              <h4 class="text-center text-gray-500" id="foodBowls">
+                20 Bowls available
+              </h4>
+            </a>
+            <a href="" class="menuGridFoods">
+              <img
+                src="/img/product-2.png"
+                id="foodPicture"
+                class="absolute -top-[70px] w-40 h-40 mx-7"
+              />
+              <h4 class="text-center px-8 p-1 mt-20 text-white" id="foodName">
+                Spicy seasoned seafood noodles
+              </h4>
+              <h4
+                class="text-center text-sm p-1 font-semibold text-white"
+                id="foodPrice"
+              >
+                2.29$
+              </h4>
+              <h4 class="text-center text-gray-500" id="foodBowls">
+                20 Bowls available
+              </h4>
+            </a>
+            <a href="" class="menuGridFoods">
+              <img
+                src="/img/product-1.png"
+                id="foodPicture"
+                class="absolute -top-[70px] w-40 h-40 mx-7"
+              />
+              <h4 class="text-center px-8 p-1 mt-20 text-white" id="foodName">
+                Spicy seasoned seafood noodles
+              </h4>
+              <h4
+                class="text-center text-sm p-1 font-semibold text-white"
+                id="foodPrice"
+              >
+                2.29$
+              </h4>
+              <h4 class="text-center text-gray-500" id="foodBowls">
+                20 Bowls available
+              </h4>
+            </a>
+            <a href="" class="menuGridFoods">
+              <img
+                src="/img/product-3.png"
+                id="foodPicture"
+                class="absolute -top-[70px] w-40 h-40 mx-7"
+              />
+              <h4 class="text-center px-8 p-1 mt-20 text-white" id="foodName">
+                Spicy seasoned seafood noodles
+              </h4>
+              <h4
+                class="text-center text-sm p-1 font-semibold text-white"
+                id="foodPrice"
+              >
+                2.29$
+              </h4>
+              <h4 class="text-center text-gray-500" id="foodBowls">
+                20 Bowls available
+              </h4>
+            </a>
+            <!--menu grid foods sta end-->
+          </div>
+        </div>
+        <div
+          id="reciptDiv"
+          class="w-[36%] bg h-full fixed right-0 bg-darkBlue expanded overflow-hidden"
+        >
+          <div class="p-6">
+            <h4 class="text-xl text-white font-bold mb-2" id="orderName">
+              Orders #1
+            </h4>
+            <div class="flex mt-7 space-x-2 font-semibold">
+              <a
+                href="#"
+                class="tab text-white text-sm rounded-lg border-[1px] border-gray-700 bg-lightIvory py-1.5 px-2.5"
+                >Dine in</a
+              >
+              <a
+                href="#"
+                class="tab text-lightIvory text-sm rounded-lg border-[1px] border-gray-700 py-1.5 px-2.5"
+                >To go</a
+              >
+              <a
+                href="#"
+                class="tab text-lightIvory text-sm rounded-lg border-[1px] border-gray-700 py-1.5 px-2.5"
+                >Delivery</a
+              >
+            </div>
+            <div class="flex justify-between py-4 text-white">
+              <h4 class="w-3/4">Item</h4>
+              <h4 class="w-[12.5%] text-center">Qty</h4>
+              <h4 class="w-[12.5%] text-center">Price</h4>
+            </div>
+            <div
+              class="mt-0.5 border-b-2 border-[#42465b89] w-full mx-auto"
+            ></div>
+            <div
+              class="py-2 overflow-auto space-y-6 min-h-[400px] max-h-[400px] scrollbar-hide"
+            >
+              <div class="w-full bg-darkBlue h-24 p-1">
+                <div class="flex items-center">
+                  <div class="w-3/4 flex">
+                    <img src="/img/product-1.png" alt="" class="w-12 h-12" />
+                    <div class="p-0.5 px-2">
+                      <h4 class="text-white">Spicy seasoned seafo...</h4>
+                      <h4 class="text-sm text-gray-600">2.99$</h4>
+                    </div>
+                  </div>
+                  <div class="w-[12.5%]">
+                    <div
+                      class="text-center items-center rounded-md bg-darkBlue1 mx-2 py-2 text-white border-2 border-gray-700"
+                      id="qty"
+                    >
+                      2
+                    </div>
+                  </div>
+                  <div class="w-[12.5%] text-center text-white mx-auto">
+                    $ 4.58
+                  </div>
+                </div>
+                <div class="flex items-center">
+                  <input
+                    type="text"
+                    name=""
+                    id=""
+                    placeholder="Order Note..."
+                    class="w-[86%] my-3 p-2.5 border-2 h-12 border-gray-600 rounded-lg bg-darkBlue1"
+                  />
+                  <div class="group">
+                    <button
+                      class="border-2 border-pinkyRed rounded-xl ml-4 w-12 h-12 group-hover:border-red"
+                    >
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="hsl(2deg 28% 40%)"
+                        class="mx-auto group-hover:fill-red"
+                      >
+                        <path
+                          d="M15 2H9c-1.103 0-2 .897-2 2v2H3v2h2v12c0 1.103.897 2 2 2h10c1.103 0 2-.897 2-2V8h2V6h-4V4c0-1.103-.897-2-2-2zM9 4h6v2H9V4zm8 16H7V8h10v12z"
+                        ></path>
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div class="w-full bg-darkBlue h-24 p-1">
+                <div class="flex items-center">
+                  <div class="w-3/4 flex">
+                    <img src="/img/product-1.png" alt="" class="w-12 h-12" />
+                    <div class="p-0.5 px-2">
+                      <h4 class="text-white">Spicy seasoned seafo...</h4>
+                      <h4 class="text-sm text-gray-600">2.99$</h4>
+                    </div>
+                  </div>
+                  <div class="w-[12.5%]">
+                    <div
+                      class="text-center items-center rounded-md bg-darkBlue1 mx-2 py-2 text-white border-2 border-gray-700"
+                      id="qty"
+                    >
+                      2
+                    </div>
+                  </div>
+                  <div class="w-[12.5%] text-center text-white mx-auto">
+                    $ 4.58
+                  </div>
+                </div>
+                <div class="flex items-center">
+                  <input
+                    type="text"
+                    name=""
+                    id=""
+                    placeholder="Order Note..."
+                    class="w-[86%] my-3 p-2.5 border-2 h-12 border-gray-600 rounded-lg bg-darkBlue1"
+                  />
+                  <div class="group">
+                    <button
+                      class="border-2 border-pinkyRed rounded-xl ml-4 w-12 h-12 group-hover:border-red"
+                    >
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="hsl(2deg 28% 40%)"
+                        class="mx-auto group-hover:fill-red"
+                      >
+                        <path
+                          d="M15 2H9c-1.103 0-2 .897-2 2v2H3v2h2v12c0 1.103.897 2 2 2h10c1.103 0 2-.897 2-2V8h2V6h-4V4c0-1.103-.897-2-2-2zM9 4h6v2H9V4zm8 16H7V8h10v12z"
+                        ></path>
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div class="w-full bg-darkBlue h-24 p-1">
+                <div class="flex items-center">
+                  <div class="w-3/4 flex">
+                    <img src="/img/product-1.png" alt="" class="w-12 h-12" />
+                    <div class="p-0.5 px-2">
+                      <h4 class="text-white">Spicy seasoned seafo...</h4>
+                      <h4 class="text-sm text-gray-600">2.99$</h4>
+                    </div>
+                  </div>
+                  <div class="w-[12.5%]">
+                    <div
+                      class="text-center items-center rounded-md bg-darkBlue1 mx-2 py-2 text-white border-2 border-gray-700"
+                      id="qty"
+                    >
+                      2
+                    </div>
+                  </div>
+                  <div class="w-[12.5%] text-center text-white mx-auto">
+                    $ 4.58
+                  </div>
+                </div>
+                <div class="flex items-center">
+                  <input
+                    type="text"
+                    name=""
+                    id=""
+                    placeholder="Order Note..."
+                    class="w-[86%] my-3 p-2.5 border-2 h-12 border-gray-600 rounded-lg bg-darkBlue1"
+                  />
+                  <div class="group">
+                    <button
+                      class="border-2 border-pinkyRed rounded-xl ml-4 w-12 h-12 group-hover:border-red"
+                    >
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="hsl(2deg 28% 40%)"
+                        class="mx-auto group-hover:fill-red"
+                      >
+                        <path
+                          d="M15 2H9c-1.103 0-2 .897-2 2v2H3v2h2v12c0 1.103.897 2 2 2h10c1.103 0 2-.897 2-2V8h2V6h-4V4c0-1.103-.897-2-2-2zM9 4h6v2H9V4zm8 16H7V8h10v12z"
+                        ></path>
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div class="w-full bg-darkBlue h-24 p-1">
+                <div class="flex items-center">
+                  <div class="w-3/4 flex">
+                    <img src="/img/product-1.png" alt="" class="w-12 h-12" />
+                    <div class="p-0.5 px-2">
+                      <h4 class="text-white">Spicy seasoned seafo...</h4>
+                      <h4 class="text-sm text-gray-600">2.99$</h4>
+                    </div>
+                  </div>
+                  <div class="w-[12.5%]">
+                    <div
+                      class="text-center items-center rounded-md bg-darkBlue1 mx-2 py-2 text-white border-2 border-gray-700"
+                      id="qty"
+                    >
+                      2
+                    </div>
+                  </div>
+                  <div class="w-[12.5%] text-center text-white mx-auto">
+                    $ 4.58
+                  </div>
+                </div>
+                <div class="flex items-center">
+                  <input
+                    type="text"
+                    name=""
+                    id=""
+                    placeholder="Order Note..."
+                    class="w-[86%] my-3 p-2.5 border-2 h-12 border-gray-600 rounded-lg bg-darkBlue1"
+                  />
+                  <div class="group">
+                    <button
+                      class="border-2 border-pinkyRed rounded-xl ml-4 w-12 h-12 group-hover:border-red"
+                    >
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="hsl(2deg 28% 40%)"
+                        class="mx-auto group-hover:fill-red"
+                      >
+                        <path
+                          d="M15 2H9c-1.103 0-2 .897-2 2v2H3v2h2v12c0 1.103.897 2 2 2h10c1.103 0 2-.897 2-2V8h2V6h-4V4c0-1.103-.897-2-2-2zM9 4h6v2H9V4zm8 16H7V8h10v12z"
+                        ></path>
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              class="mt-1.5 border-b-2 border-[#42465b89] w-full mx-auto"
+            ></div>
+            <div class="space-y-2 mt-5 text-gray-400 mx-3">
+              <div class="justify-between flex">
+                <h4>Discount</h4>
+                <h4 class="text-white">0$</h4>
+              </div>
+              <div class="flex justify-between">
+                <h4 class="">Sub Total</h4>
+                <h4 class="text-white">21.03$</h4>
+              </div>
+            </div>
+            <a
+              href="#"
+              class="mt-5 shadow-sm bg-gradient-to-l from-lightIvory to-lightRed shadow-white text-center text-white text-sm p-3 block w-full rounded-md"
+              >Continue to Payment</a
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
+<!--npm run watch-->

@@ -1,0 +1,55 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+/* creating class */
+@layer base {
+}
+@layer components {
+}
+
+.navbarItems {
+  @apply p-2 rounded-xl mx-auto items-center mt-6;
+}
+
+.menuGridFoods {
+  @apply w-[230px] h-52 bg-darkBlue relative rounded-xl;
+}
+
+#menuGrid {
+  grid-row-gap: 75px;
+}
+
+.menuGroupHover {
+  @apply mr-5 mt-2 group-hover:border-b-2 group-hover:border-lightIvory;
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+.maWidth {
+  width: 93%;
+}
+
+.changingCols {
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  max-width: max-content;
+}
+
+.expanded {
+  animation-name: slidein;
+  animation-duration: 1s;
+}
+
+.collapsed {
+  transform: translatex(-100%)
+}
+
+#reciptDiv {
+  margin-right: -100%;
+  transition: all 1s;
+}
+
+#reciptDiv.expanded {
+  margin-right: 0;
+}
