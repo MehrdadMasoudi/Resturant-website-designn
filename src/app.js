@@ -23,6 +23,4 @@ collapseBtn.addEventListener("click", hello);
 function hello() {
   reciptDiv.classList.toggle("collapsed");
   reciptDiv.classList.toggle("expanded");
-  mainDiv.classList.toggle("maWidth");
-  menuGrid.classList.toggle("changingCols");
 }

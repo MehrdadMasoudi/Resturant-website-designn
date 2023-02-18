@@ -525,8 +525,16 @@ video {
   top: -70px;
 }
 
+.left-0 {
+  left: 0px;
+}
+
 .right-0 {
   right: 0px;
+}
+
+.m-auto {
+  margin: auto;
 }
 
 .mx-2 {
@@ -547,11 +555,6 @@ video {
 .mx-7 {
   margin-left: 1.75rem;
   margin-right: 1.75rem;
-}
-
-.mx-8 {
-  margin-left: 2rem;
-  margin-right: 2rem;
 }
 
 .mx-9 {
@@ -577,6 +580,10 @@ video {
   margin-left: 1rem;
 }
 
+.ml-7 {
+  margin-left: 1.75rem;
+}
+
 .ml-\[7\%\] {
   margin-left: 7%;
 }
@@ -585,12 +592,8 @@ video {
   margin-left: auto;
 }
 
-.mr-2 {
-  margin-right: 0.5rem;
-}
-
-.mr-2\.5 {
-  margin-right: 0.625rem;
+.mr-3 {
+  margin-right: 0.75rem;
 }
 
 .mr-5 {
@@ -717,10 +720,6 @@ video {
   width: 36%;
 }
 
-.w-\[57\%\] {
-  width: 57%;
-}
-
 .w-\[7\%\] {
   width: 7%;
 }
@@ -733,16 +732,16 @@ video {
   width: 92%;
 }
 
+.w-\[93\%\] {
+  width: 93%;
+}
+
 .w-full {
   width: 100%;
 }
 
-.max-w-6xl {
-  max-width: 72rem;
-}
-
-.grid-cols-3 {
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+.grid-cols-5 {
+  grid-template-columns: repeat(5, minmax(0, 1fr));
 }
 
 .flex-col {
@@ -757,8 +756,12 @@ video {
   justify-content: space-between;
 }
 
-.gap-\[34px\] {
-  gap: 34px;
+.gap-8 {
+  gap: 2rem;
+}
+
+.gap-y-20 {
+  row-gap: 5rem;
 }
 
 .space-x-2 > :not([hidden]) ~ :not([hidden]) {
@@ -818,16 +821,6 @@ video {
 .rounded-l-2xl {
   border-top-left-radius: 1rem;
   border-bottom-left-radius: 1rem;
-}
-
-.rounded-l-xl {
-  border-top-left-radius: 0.75rem;
-  border-bottom-left-radius: 0.75rem;
-}
-
-.rounded-r-xl {
-  border-top-right-radius: 0.75rem;
-  border-bottom-right-radius: 0.75rem;
 }
 
 .border-2 {
@@ -1094,14 +1087,10 @@ video {
 .menuGridFoods {
   position: relative;
   height: 13rem;
-  width: 230px;
+  width: auto;
   border-radius: 0.75rem;
   --tw-bg-opacity: 1;
   background-color: hsl(249deg 19% 14% / var(--tw-bg-opacity));
-}
-
-#menuGrid {
-  grid-row-gap: 75px;
 }
 
 .menuGroupHover {
@@ -1115,18 +1104,18 @@ video {
   border-color: hsl(11deg 75% 66% / var(--tw-border-opacity));
 }
 
+.menuGridFoodImages {
+  position: absolute;
+  top: -70px;
+  left: 0px;
+  right: 0px;
+  margin: auto;
+  height: 10rem;
+  width: 10rem;
+}
+
 .scrollbar-hide::-webkit-scrollbar {
   display: none;
-}
-
-.maWidth {
-  width: 93%;
-}
-
-.changingCols {
-  grid-template-columns: repeat(5, minmax(0, 1fr));
-  max-width: -moz-max-content;
-  max-width: max-content;
 }
 
 .expanded {

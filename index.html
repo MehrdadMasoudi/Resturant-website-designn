@@ -2,17 +2,16 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="Permissions-Policy" content="interest-cohort=()">
+    <!--<link rel="stylesheet" href="/css/style.css" />
+    <script src="/src/app.js" defer></script>-->
     <link rel="stylesheet" href="/Resturant-website-designn/css/style.css" />
+    <script src="/Resturant-website-designn/app.js" defer></script>
     <title>Resturant</title>
-    <script src="/Resturant-website-designn/src/app.js" defer></script>
   </head>
   <body>
     <section>
       <div class="flex bg-darkBlue1">
-        <div
-          class="flex w-[7%] bg-darkBlue fixed h-full flex-col space-y-6"
-        >
+        <div class="flex w-[7%] bg-darkBlue fixed h-full flex-col space-y-6">
           <!-- sidebar-->
           <a href="#" class="navbarItems bg-darkpink mt-6"
             ><svg
@@ -27,7 +26,7 @@
               ></path></svg
           ></a>
           <a href="#" class="bg-darkBlue1 p-3 rounded-l-2xl ml-auto">
-            <div class="p-5 rounded-2xl bg-lightIvory mr-2.5">
+            <div class="p-5 rounded-2xl bg-lightIvory mr-3">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="20"
@@ -124,7 +123,7 @@
             ></a>
           </div>
         </div>
-        <div class="bg-darkBlue1 min-h-screen w-[57%] ml-[7%]" id="mainMenuDiv">
+        <div class="bg-darkBlue1 min-h-screen w-[93%] ml-[7%]" id="mainMenuDiv">
           <nav class="items-center justify-between text-white">
             <!-- Logo and input-->
             <div class="p-4 flex mt-2 justify-between mx-4">
@@ -207,15 +206,15 @@
             </div>
           </div>
           <div
-            class="mx-8 mt-10 grid grid-cols-3 gap-[34px] items-center max-w-6xl"
+            class="ml-7 mr-5 mt-10 grid grid-cols-5 gap-8 gap-y-20 items-center min-w-6xl"
             id="menuGrid"
           >
             <!--menu grid foods sta-->
             <a href="" class="menuGridFoods">
               <img
-                src="/Resturant-website-designn/img/product-1.png"
+                src="/img/product-1.png"
                 id="foodPicture"
-                class="absolute -top-[70px] w-40 h-40 mx-7"
+                class="menuGridFoodImages"
               />
               <h4 class="text-center px-8 p-1 mt-20 text-white" id="foodName">
                 Spicy seasoned seafood noodles
@@ -234,7 +233,7 @@
               <img
                 src="/Resturant-website-designn/img/product-1.png"
                 id="foodPicture"
-                class="absolute -top-[70px] w-40 h-40 mx-7"
+                class="menuGridFoodImages"
               />
               <h4 class="text-center px-8 p-1 mt-20 text-white" id="foodName">
                 Spicy seasoned seafood noodles
@@ -253,7 +252,7 @@
               <img
                 src="/Resturant-website-designn/img/product-1.png"
                 id="foodPicture"
-                class="absolute -top-[70px] w-40 h-40 mx-7"
+                class="menuGridFoodImages"
               />
               <h4 class="text-center px-8 p-1 mt-20 text-white" id="foodName">
                 Spicy seasoned seafood noodles
@@ -272,7 +271,7 @@
               <img
                 src="/Resturant-website-designn/img/product-1.png"
                 id="foodPicture"
-                class="absolute -top-[70px] w-40 h-40 mx-7"
+                class="menuGridFoodImages"
               />
               <h4 class="text-center px-8 p-1 mt-20 text-white" id="foodName">
                 Spicy seasoned seafood noodles
@@ -291,7 +290,7 @@
               <img
                 src="/Resturant-website-designn/img/product-2.png"
                 id="foodPicture"
-                class="absolute -top-[70px] w-40 h-40 mx-7"
+                class="menuGridFoodImages"
               />
               <h4 class="text-center px-8 p-1 mt-20 text-white" id="foodName">
                 Spicy seasoned seafood noodles
@@ -310,7 +309,7 @@
               <img
                 src="/Resturant-website-designn/img/product-1.png"
                 id="foodPicture"
-                class="absolute -top-[70px] w-40 h-40 mx-7"
+                class="menuGridFoodImages"
               />
               <h4 class="text-center px-8 p-1 mt-20 text-white" id="foodName">
                 Spicy seasoned seafood noodles
@@ -329,7 +328,7 @@
               <img
                 src="/Resturant-website-designn/img/product-3.png"
                 id="foodPicture"
-                class="absolute -top-[70px] w-40 h-40 mx-7"
+                class="menuGridFoodImages"
               />
               <h4 class="text-center px-8 p-1 mt-20 text-white" id="foodName">
                 Spicy seasoned seafood noodles
@@ -349,7 +348,7 @@
         </div>
         <div
           id="reciptDiv"
-          class="w-[36%] bg h-full fixed right-0 bg-darkBlue expanded overflow-hidden"
+          class="w-[36%] bg h-full fixed right-0 bg-darkBlue collapsed overflow-hidden"
         >
           <div class="p-6">
             <h4 class="text-xl text-white font-bold mb-2" id="orderName">
@@ -386,7 +385,11 @@
               <div class="w-full bg-darkBlue h-24 p-1">
                 <div class="flex items-center">
                   <div class="w-3/4 flex">
-                    <img src="/Resturant-website-designn/img/product-1.png" alt="" class="w-12 h-12" />
+                    <img
+                      src="/Resturant-website-designn/img/product-1.png"
+                      alt=""
+                      class="w-12 h-12"
+                    />
                     <div class="p-0.5 px-2">
                       <h4 class="text-white">Spicy seasoned seafo...</h4>
                       <h4 class="text-sm text-gray-600">2.99$</h4>
@@ -435,7 +438,11 @@
               <div class="w-full bg-darkBlue h-24 p-1">
                 <div class="flex items-center">
                   <div class="w-3/4 flex">
-                    <img src="/Resturant-website-designn/img/product-1.png" alt="" class="w-12 h-12" />
+                    <img
+                      src="/Resturant-website-designn/img/product-1.png"
+                      alt=""
+                      class="w-12 h-12"
+                    />
                     <div class="p-0.5 px-2">
                       <h4 class="text-white">Spicy seasoned seafo...</h4>
                       <h4 class="text-sm text-gray-600">2.99$</h4>
@@ -484,7 +491,11 @@
               <div class="w-full bg-darkBlue h-24 p-1">
                 <div class="flex items-center">
                   <div class="w-3/4 flex">
-                    <img src="/Resturant-website-designn/img/product-1.png" alt="" class="w-12 h-12" />
+                    <img
+                      src="/Resturant-website-designn/img/product-1.png"
+                      alt=""
+                      class="w-12 h-12"
+                    />
                     <div class="p-0.5 px-2">
                       <h4 class="text-white">Spicy seasoned seafo...</h4>
                       <h4 class="text-sm text-gray-600">2.99$</h4>
@@ -533,7 +544,11 @@
               <div class="w-full bg-darkBlue h-24 p-1">
                 <div class="flex items-center">
                   <div class="w-3/4 flex">
-                    <img src="/Resturant-website-designn/img/product-1.png" alt="" class="w-12 h-12" />
+                    <img
+                      src="/Resturant-website-designn/img/product-1.png"
+                      alt=""
+                      class="w-12 h-12"
+                    />
                     <div class="p-0.5 px-2">
                       <h4 class="text-white">Spicy seasoned seafo...</h4>
                       <h4 class="text-sm text-gray-600">2.99$</h4>
